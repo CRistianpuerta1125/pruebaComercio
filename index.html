@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Incluye Splide.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css"
+    />
+    <!-- Incluye Splide.js JavaScript (jQuery es opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>SOCIAL</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#slider">Información general</a></li>
+          <li><a href="#formulario">Crea tu tienda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
+    <div id="splide" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="https://via.placeholder.com/1920x767" alt="Slide 1"></li>
+            <li class="splide__slide"><img src="https://dummyimage.com/1920x720/000/fff" alt="Slide 2"></li>
+            <li class="splide__slide"><img src="https://via.placeholder.com/1920x767" alt="Slide 3"></li>
+          </ul>
+        </div>
+      </div>
+    
+
+    <form id="formulario" action="guardar_datos.php" method="post">
+      <label for="nombre">Nombre del usuario:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo electrónico del usuario:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" />
+
+      <label for="nombreTienda">Nombre de la tienda:</label>
+      <input type="text" id="nombreTienda" name="nombreTienda" required />
+
+      <label for="pais">País:</label>
+      <select id="pais" name="pais" required>
+        <option value="Colombia">Colombia</option>
+        <option value="México">México</option>
+        <option value="Chile">Chile</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Panamá">Panamá</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Costa Rica">Costa Rica</option>
+        <option value="España">España</option>
+        <option value="Francia">Francia</option>
+      </select>
+
+      <label for="direccionTienda">Dirección de la tienda:</label>
+      <input type="text" id="direccionTienda" name="direccionTienda" required />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <footer>
+      <p>
+        © 2024 Social Agencia Global <br />
+        Todos los derechos reservados
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
